@@ -40,7 +40,7 @@ exports.getRandomTopic = async(topic) =>{
 exports.getID = async(id) =>{
     return new Promise((resolve,reject)=>{
         try{
-            const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/yo-mama-source/jokes.json')));
+            const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/jokes.json')));
             let bigArray = Object.values(jokes)
             let bruh = []
             for(thing of bigArray){
