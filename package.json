@@ -1,5 +1,5 @@
 {
-  "name": "yomama",
+  "name": "yourmama",
   "version": "1.0.0",
   "description": "recieve random yomama jokes",
   "main": "index.js",
@@ -9,9 +9,21 @@
   "keywords": [
     "yomama"
   ],
-  "author": "",
+  "author": "JesseStorms",
   "license": "MIT",
   "dependencies": {
     "mocha": "^8.3.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesseStorms/yomama.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JesseStorms/yomama/issues"
+  },
+  "homepage": "https://github.com/JesseStorms/yomama#readme"
 }
