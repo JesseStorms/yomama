@@ -1,0 +1,17 @@
+{
+  "name": "yomama",
+  "version": "1.0.0",
+  "description": "recieve random yomama jokes",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "yomama"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^8.3.0"
+  }
+}
