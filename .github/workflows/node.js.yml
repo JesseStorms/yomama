@@ -4,8 +4,6 @@
 name: The ultimate yomama test
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
