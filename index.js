@@ -1,8 +1,9 @@
 const fs = require('fs')
+const path = require('path')
 exports.getRoast = async (args) => {
     return new Promise((resolve,reject)=>{
         try{
-            const jokes = JSON.parse(fs.readFileSync('./yo-mama-source/jokes.json'));
+            const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/yo-mama-source/jokes.json')));
             return resolve(jokes[args.type][args.id])
         }catch(e){
             return reject(new Error("yo mama so stupid she fucked up syntax, probably\nshould be {type:'typet',id:#id}\n\n"+e))
@@ -13,7 +14,7 @@ exports.getRoast = async (args) => {
 exports.getRandom = async() =>{
     return new Promise((resolve,reject)=>{
         try{
-            const jokes = JSON.parse(fs.readFileSync('./yo-mama-source/jokes.json'));
+            const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/yo-mama-source/jokes.json')));
             let bigArray = Object.values(jokes)
             let bruh = []
             for(thing of bigArray){
@@ -28,7 +29,7 @@ exports.getRandom = async() =>{
 exports.getRandomTopic = async(topic) =>{
     return new Promise((resolve,reject)=>{
         try{
-            const jokes = JSON.parse(fs.readFileSync('./yo-mama-source/jokes.json'));
+            const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/yo-mama-source/jokes.json')));
             const bruh = Object.values(jokes[topic])
             return resolve(bruh[Math.floor(Math.random() * bruh.length)])
         }catch(e){
@@ -39,7 +40,7 @@ exports.getRandomTopic = async(topic) =>{
 exports.getID = async(id) =>{
     return new Promise((resolve,reject)=>{
         try{
-            const jokes = JSON.parse(fs.readFileSync('./yo-mama-source/jokes.json'));
+            const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/yo-mama-source/jokes.json')));
             let bigArray = Object.values(jokes)
             let bruh = []
             for(thing of bigArray){
