@@ -1,5 +1,7 @@
 # yourmama package
 
+![Node.js Package](https://github.com/JesseStorms/yomama/workflows/Node.js%20Package/badge.svg)
+
 My first really stupid npm package.
 
 Promise based yomama joke getting package. Just in case you need to  have access to mom-roasting things while working offline. I used [Josh Buchea's wonderful repo](https://github.com/joshbuchea/yo-mama) as source of the yomama jokes. You can find my fork [here](https://github.com/JesseStorms/yo-mama), if you want to contribute to the file.
