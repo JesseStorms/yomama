@@ -13,21 +13,21 @@ Why did I make this? I was really bored and searched for excuses to learn how to
     const yourmama = require('yourmama')
     
     //get a random joke
-    const randomJoke = yourmama.getRoast() //Omitting params returns a random roast.
-    const randomJoke = yourmama.getRandom()
+    const randomJoke = yourmama.getRoast().then(roast=>{return roast}) //Omitting params returns a random roast.
+    const randomJoke = yourmama.getRandom().then(roast=>{return roast})
 
     //get a random joke in a topic
     //topic can be: fat, short, stupid, ugly, nasty, hairy, bald, old, poor, skinny, tall and nice
-    const fatJoke = yourmama.getTopic({topic:'fat'}) //if object only contains topic.
-    const fatJoke = yourmama.getTopic("fat") 
+    const fatJoke = yourmama.getRoast({topic:'fat'}).then(roast=>{return roast}) //if object only contains topic.
+    const fatJoke = yourmama.getTopic("fat").then(roast=>{return roast})
      
     //get by ID, just makes a giant array and selects one of them
-    const speficiJoke = yourmama.getRoast({id:0})
-    const specificJoke = yourmama.getID(0) 
+    const speficiJoke = yourmama.getRoast({id:0}).then(roast=>{return roast})
+    const specificJoke = yourmama.getID(0).then(roast=>{return roast})
     //returns "Yo mama is so fat that her bellybutton gets home 15 minutes before she does." 
      
     //get a specific one out of the topic array
-    const firstFatJoke = yourmama.getRoast({topic:'fat',id:0}) //returns "Yo mama is so fat that her bellybutton gets home 15 minutes before she does." 
+    const firstFatJoke = yourmama.getRoast({topic:'fat',id:0}).then(roast=>{return roast}) //returns "Yo mama is so fat that her bellybutton gets home 15 minutes before she does." 
 
 ## Contributing
 

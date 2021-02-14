@@ -1,13 +1,13 @@
 {
   "name": "yourmama",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "recieve random yomama jokes",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "keywords": [
-    "yomama"
+    "yomama","yourmama","meme","shitpost"
   ],
   "author": "JesseStorms",
   "license": "MIT",
