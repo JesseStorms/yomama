@@ -13,14 +13,18 @@ Why did I make this? I was really bored and searched for excuses to learn how to
     const yourmama = require('yourmama')
     
     //get a random joke
-    const joke = yourmama.getRoast() //Omitting params returns a random roast.
-    const joke = yourmama.getRandom()
-     
+    const randomJoke = yourmama.getRoast() //Omitting params returns a random roast.
+    const randomJoke = yourmama.getRandom()
+
     //get a random joke in a topic
-    const fatJoke = yourmama.getTopic("fat") //or short, stupid, ugly, nasty, hairy, bald, old, poor, skinny, tall 
+    //topic can be: fat, short, stupid, ugly, nasty, hairy, bald, old, poor, skinny, tall and nice
+    const fatJoke = yourmama.getTopic({topic:'fat'}) //if object only contains topic.
+    const fatJoke = yourmama.getTopic("fat") 
      
     //get by ID, just makes a giant array and selects one of them
-    const specificJoke = yourmama.getID(0) //returns "Yo mama is so fat that her bellybutton gets home 15 minutes before she does." 
+    const speficiJoke = yourmama.getRoast({id:0})
+    const specificJoke = yourmama.getID(0) 
+    //returns "Yo mama is so fat that her bellybutton gets home 15 minutes before she does." 
      
     //get a specific one out of the topic array
     const firstFatJoke = yourmama.getRoast({topic:'fat',id:0}) //returns "Yo mama is so fat that her bellybutton gets home 15 minutes before she does." 
