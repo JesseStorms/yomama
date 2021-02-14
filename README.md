@@ -11,6 +11,7 @@ Why did I make this? I was really bored and searched for excuses to learn how to
     const yourmama = require('yourmama')
     
     //get a random joke
+    const joke = yourmama.getRoast() //Omitting params returns a random roast.
     const joke = yourmama.getRandom()
      
     //get a random joke in a topic

@@ -2,6 +2,15 @@ const fs = require('fs')
 const path = require('path')
 exports.getRoast = async (args) => {
     return new Promise((resolve,reject)=>{
+        if((typeof args == 'undefined')||(typeof args.type == 'undefined'&& typeof args.id == 'undefined')){
+            return this.getRandom().then(bruh => resolve(bruh))
+        }
+        if(typeof args.type == 'string' && typeof args.id == 'undefined'){
+            return this.getRandomTopic(args.type).then(bruh => resolve(bruh))
+        }
+        if(typeof args.id == 'string' && typeof args.type == 'undefined'){
+            return this.getID(args.id).then(bruh => resolve(bruh))
+        }
         try{
             const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/jokes.json')));
             return resolve(jokes[args.type][args.id])
