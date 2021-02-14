@@ -1,6 +1,6 @@
 {
   "name": "yourmama",
-  "version": "1.0.0",
+  "version": "1.0.0.1",
   "description": "recieve random yomama jokes",
   "main": "index.js",
   "scripts": {
