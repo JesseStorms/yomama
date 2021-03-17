@@ -53,3 +53,7 @@ If there are (somehow) any issues, let me know on the [repository](https://githu
 ### Version 1.0.4
 
 Added some JSDocumentation to help out Intellisense and fixed typos. Otherwise, it's the exact same as v1.0.3.
+
+## License
+
+This project uses the MIT License, read more [here](https://github.com/JesseStorms/yomama/blob/main/LICENSE.md)
