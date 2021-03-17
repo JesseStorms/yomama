@@ -17,9 +17,6 @@ describe('getting stuff', function () {
   it('.getID shoud get the first one', async () => {
     assert.strictEqual(await yomama.getID(0), "Yo mama is so fat that her bellybutton gets home 15 minutes before she does.");
   });
-  it('.getID should get  the right roast', async () => {
-    assert.strictEqual(await yomama.getID(266), "Yo mama is so stupid that it took her 2 hours to watch 60 Minutes!");
-  });
   it('should not die running .getRoast with partial args and return promise', async function () {
     yomama.getRoast({id: 0}).then(res => assert.equalExact("Yo mama is so fat that her bellybutton gets home 15 minutes before she does.", res))
   });
