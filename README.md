@@ -26,7 +26,7 @@ const randomJoke = yourmama.getRandom().then(roast=>{return roast})
 const randomJoke = yourmama.getRoast().then(roast=>{return roast})
 
 //get a random joke in a topic
-//topic can be: fat, short, stupid, ugly, nasty, hairy, bald, old, poor, skinny, talland nice
+//topic can be: fat, short, stupid, ugly, nasty, hairy, bald, old, poor, skinny, tall and nice
 const fatJoke = yourmama.getTopic("fat").then(roast=>{return roast})
 //if you want to use .getRoast()
 const fatJoke = yourmama.getRoast({topic:'fat'}).then(roast=>{return roast}) 
@@ -44,11 +44,17 @@ const firstFatJoke = yourmama.getRoast({topic:'fat',id:0}).then(roast=>{return r
 
 ## Contributing
 
-Fork and merge request the [repo](https://github.com/JesseStorms/yomama). You can find the source of the jokes [here](https://github.com/JesseStorms/yo-mama), if you want to contribute to the jokes themselves.
+Fork and merge request the [repo](https://github.com/JesseStorms/yomama). You can do whatever to improve it.
 
 If there are (somehow) any issues, let me know on the [repository](https://github.com/JesseStorms/yomama/issues).
 
 ## Changes
+
+### Version 1.0.6
+
+Added a few more jokes and removed the unneeded submodule.
+
+I can't really be bothered that much to implement the new way of requiring/importing modules at the moment.
 
 ### Version 1.0.4
 
