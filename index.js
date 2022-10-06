@@ -1,5 +1,4 @@
-const fs = require('fs')
-const path = require('path')
+import { readFileSync } from 'fs'
 /**
  * Get and return a roast using promises. 
  * @param {object} [searchArgs] Object that determens the roast.
@@ -14,7 +13,7 @@ const path = require('path')
  * @example yourmama.getRoast({type:"fat",id:0}).then(res=>console.log(res))
  * "Yo mama is so fat that her bellybutton gets home 15 minutes before she does."
  */
-exports.getRoast = async (args) => {
+export async function getRoast(args) {
     return new Promise((resolve,reject)=>{
         if((typeof args == 'undefined')||(typeof args.type == 'undefined'&& typeof args.id == 'undefined')){
             return this.getRandom().then(bruh => resolve(bruh))
@@ -26,7 +25,7 @@ exports.getRoast = async (args) => {
             return this.getID(args.id).then(bruh => resolve(bruh))
         }
         try{
-            const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/jokes.json')));
+            const jokes = JSON.parse(readFileSync(new URL('jokes.json', import.meta.url)));
             return resolve(jokes[args.type][args.id])
         }catch(e){
             return reject(new Error("yo mama so stupid she fucked up syntax, probably\nshould be {type:'typet',id:#id}\n\n"+e))
@@ -38,10 +37,10 @@ exports.getRoast = async (args) => {
  * get a random roast
  * @returns {Promise<string>} A random roast.
  */
-exports.getRandom = async() =>{
+export async function getRandom(){
     return new Promise((resolve,reject)=>{
         try{
-            const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/jokes.json')));
+            const jokes = JSON.parse(readFileSync(new URL('jokes.json', import.meta.url)));
             let bigArray = Object.values(jokes)
             let bruh = []
             for(thing of bigArray){
@@ -60,10 +59,10 @@ exports.getRandom = async() =>{
  * @returns {Promise<string>} A random roast based on your topic
  * @throws An error if topic doesn't exist.
  */
-exports.getRandomTopic = async(topic) =>{
+export async function getRandomTopic(topic){
     return new Promise((resolve,reject)=>{
         try{
-            const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/jokes.json')));
+            const jokes = JSON.parse(readFileSync(new URL('jokes.json', import.meta.url)));
             const bruh = Object.values(jokes[topic])
             return resolve(bruh[Math.floor(Math.random() * bruh.length)])
         }catch(e){
@@ -78,13 +77,13 @@ exports.getRandomTopic = async(topic) =>{
  * @returns {Promise<string>} Said roast.
  * @throws An error if roast doesn't exist.
  */
-exports.getID = async(id) =>{
+export async function getID(id){
     return new Promise((resolve,reject)=>{
         try{
-            const jokes = JSON.parse(fs.readFileSync(path.join(__dirname,'/jokes.json')));
+            const jokes = JSON.parse(readFileSync(new URL('jokes.json', import.meta.url)));
             let bigArray = Object.values(jokes)
             let bruh = []
-            for(thing of bigArray){
+            for(const thing of bigArray){
                 bruh.push(...thing)
             }
             return resolve(bruh[id])

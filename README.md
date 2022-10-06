@@ -17,8 +17,8 @@ npm i yourmama
 ```
 
 ```js
-//require it
-const yourmama = require('yourmama')
+//import it
+import * as yourmama from 'yourmama';
 
 //getting random jokes
 const randomJoke = yourmama.getRandom().then(roast=>{return roast})
@@ -49,6 +49,12 @@ Fork and merge request the [repo](https://github.com/JesseStorms/yomama). You ca
 If there are (somehow) any issues, let me know on the [repository](https://github.com/JesseStorms/yomama/issues).
 
 ## Changes
+
+### Version 1.1.0
+
+Changed to ES6 syntax! You should probably update your stuff or stay on 1.0.6 if you don't want to use ES6.
+
+Otherwise, nothing changed.
 
 ### Version 1.0.6
 

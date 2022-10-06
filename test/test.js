@@ -1,5 +1,7 @@
-const assert = require('assert');
-const yomama = require('../index.js');
+// const assert = require('assert');
+import * as assert from 'assert';
+// const yomama = require('../index.js');
+import * as yomama from '../index.js';
 
 describe('getting stuff', function () {
   it('.getRoast() returns the first joke of the fat ones', async () => {
